@@ -7,7 +7,7 @@ Without it, on a Czech keyboard the number row types `+ ě š č ř ž ý á í 
 ## Install
 
 1. Install [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS/releases) in the game (any 3.x version should work; the mod doesn't depend on the UE4SS SDK).
-2. Copy the `KeyboardLayoutFix` folder into the game's UE4SS `Mods` folder:
+2. Download `KeyboardLayoutFix-v*.zip` from [Releases](https://github.com/DrDraxi/ue-keyboard-fix/releases/latest) and extract the `KeyboardLayoutFix` folder into the game's UE4SS `Mods` folder:
    ```
    <Game>/<Project>/Binaries/Win64/ue4ss/Mods/KeyboardLayoutFix/
        dlls/main.dll

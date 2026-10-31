@@ -37,7 +37,9 @@ add_custom_command(TARGET KeyboardLayoutFix POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E make_directory ${KLF_DIST}/dlls
     COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:KeyboardLayoutFix> ${KLF_DIST}/dlls/main.dll
     COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_SOURCE_DIR}/mod/config.ini ${KLF_DIST}/config.ini
-    COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_SOURCE_DIR}/mod/enabled.txt ${KLF_DIST}/enabled.txt)
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_SOURCE_DIR}/mod/enabled.txt ${KLF_DIST}/enabled.txt
+    # MinHook is BSD-2: its notice must ship with the binary.
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different ${minhook_SOURCE_DIR}/LICENSE.txt ${KLF_DIST}/MinHook-LICENSE.txt)
 
 # Smoke test: `ctest -C Release` from the build dir (needs the Czech layout available).
 enable_testing()
